@@ -11,26 +11,32 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>BMI CALCULATOR</h1>
-        <form action="./Assets/main.js">
-            <label for="height">Height (cm)</label>
-            <input type="number" id="height" value="0">
-            <label for="weight ">Weight (kg)</label>
-            <input type="number " id="weight " value="0">
-        </form>
-        <button onclick="myFunction()">Try it</button>
-        <div class="flex-wrap" id="results">
-            <ul>
-                <li><strong>Height: </strong><span id="results-height"></span></li>
-                <li><strong>Weight: </strong><span id="results-weight"></span></li>
-                <li><strong>BMI: </strong><span id="results-bmi"></span></li>
-                <li><strong>Category: </strong><span id="results-cat"></span></li>
-            </ul>
-            <div class="colored-circle"></div>
+    <div class="container bg-danger">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <h1>BMI CALCULATOR</h1>
+                    <div>
+                        <label for="inputEmail">Weight in Kg</label>
+                        <input type="text" class="form-control" id="weight" placeholder="kg">
+                    </div>
+                    <div>
+                        <label for="inputPassword">Height in cm</label>
+                        <input type="text" class="form-control" id="height" placeholder="cm">
+                    </div>
+                    <button id="btn" type="submit">calculate</button>
+                </form>
+            </div>
+            <div class="col">
+                <h1>BMI RESULTS</h1>
+                <div id="result">
+
+                </div>
+            </div>
         </div>
     </div>
-    </div>
+
+
 
 
 
