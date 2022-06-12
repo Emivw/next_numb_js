@@ -1,6 +1,5 @@
 window.onload = () => {
     let button = document.querySelector("#btn");
-    // Function for calculating BMI
     button.addEventListener("click", myFunction);
 };
 
@@ -14,14 +13,12 @@ function myFunction() {
     else if (weight === "" || isNaN(weight))
         result.innerHTML = "Provide a valid Weight!";
 
-    // If both input is valid, calculate the bmi
     else {
 
-        // Fixing upto 2 decimal places
+        // calculation with Fixing upto 2 decimal places
         let bmi = (weight / ((height * height) /
             10000)).toFixed(2);
 
-        // Dividing as per the bmi conditions
         if (bmi < 18.6) result.innerHTML =
             `<p>Under Weight : <span>${bmi}</span></p>`;
 
