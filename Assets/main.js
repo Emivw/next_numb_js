@@ -1,6 +1,9 @@
 window.onload = () => {
     let button = document.querySelector("#btn");
-    button.addEventListener("click", myFunction);
+    // button.addEventListener("click", myFunction);
+    button.addEventListener("click", function(event) {
+        event.preventDefault(); // prevents form from submitting
+    })
 };
 
 function myFunction() {
