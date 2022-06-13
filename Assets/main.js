@@ -1,36 +1,81 @@
-window.onload = () => {
-    let button = document.querySelector("#btn");
-    // button.addEventListener("click", myFunction);
-    button.addEventListener("click", function(event) {
-        event.preventDefault(); // prevents form from submitting
-    })
-};
+async function getData() {
+    let collections = await fetch("https://randomuser.me/api?results=3");
+    let data = collections.json();
+    return data;
+}
 
-function myFunction() {
-    const height = parseInt(document.querySelector("#height").value);
-    const weight = parseInt(document.querySelector("#weight").value);
-    let result = document.querySelector("#result");
-    if (height === "" || isNaN(height))
-        result.innerHTML = "Provide a valid Height!";
+async function displayData() {
+    let data = await getData();
+    data.results.forEach((item, index) => {
+        container.innnerHTML += `                <div class="card-deck">
+                    <div class="card" id="${index}">
+                        <img class="card-img-top" src="${item["picture"].large}" alt="Company logo">
+                        <div class="card-body">
+                            <h5 class="card-title">${item["name"].title} ${item["name"].first} ${item["name"].last}</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-briefcase" style="font-size:20px;"></i> Company</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-user" style="font-size:20px;"></i> Role</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-map-marker" style="font-size:20px;"></i> Location</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-clock-o" style="font-size:20px;"></i> Duration</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-inr" style="font-size:20px;"></i> Cost</li>
+                            </ul>
 
-    else if (weight === "" || isNaN(weight))
-        result.innerHTML = "Provide a valid Weight!";
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn" id="left-panel-link">Register</button>
+                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal1" id="right-panel-link">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="card" id="${index + 1}">
+                        <img class="card-img-top" src="${item["picture"].large}" alt="Company logo">
+                        <div class="card-body">
+                            <h5 class="card-title">${item["name"].title} ${item["name"].first} ${item["name"].last}</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-briefcase" style="font-size:20px;"></i> Company</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-user" style="font-size:20px;"></i> Role</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-map-marker" style="font-size:20px;"></i> Location</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-clock-o" style="font-size:20px;"></i> Duration</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-inr" style="font-size:20px;"></i> Cost</li>
+                            </ul>
 
-    else {
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn" id="left-panel-link">Register</button>
+                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal2" id="right-panel-link">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="card" id="${index + 2}">
+                        <img class="card-img-top" src="${item["picture"].large}" alt="Company logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-briefcase" style="font-size:20px;"></i> Company</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-user" style="font-size:20px;"></i> Role</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-map-marker" style="font-size:20px;"></i> Location</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-clock-o" style="font-size:20px;"></i> Duration</li>
+                                <li class="list-group-item list-group-item-success"><i class="fa fa-inr" style="font-size:20px;"></i> Cost</li>
+                            </ul>
 
-        // calculation with Fixing upto 2 decimal places
-        let bmi = (weight / ((height * height) /
-            10000)).toFixed(2);
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn" id="left-panel-link">Register</button>
+                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal3" id="right-panel-link">Learn More</button>
+                        </div>
+                    </div>
+                </div>`;
+        // document.querySelector(
+        //     "#name"
+        // ).innerText = `${item["name"].title} ${item["name"].first} ${item["name"].last}`;
+        // document.querySelector(
+        //     "#email"
+        // ).innerText = `${item["email"]}`;
+        // document.querySelector("#image").src = `${item["picture"].large}`;
 
-        if (bmi < 18.6) result.innerHTML =
-            `<p>Under Weight : <span>${bmi}</span></p>`;
-
-        else if (bmi >= 18.6 && bmi < 24.9)
-            result.innerHTML =
-            `<p>Normal : <span>${bmi}</span></p>`;
-
-        else result.innerHTML =
-            `<p>Over Weight : <span>${bmi}</span></p>`;
-
-    }
+        // document.getElementById("name").innerHTML = item;
+        // document.getElementById("email").innerHTML = item;
+        // document.getElementById("name").innerHTML = [
+        //     `${item["name"].title} - ${item["name"].first} ${item["name"].last}`,
+        // ];
+        // document.getElementById("email").innerHTML = [`${item.email}`];
+    });
 }
