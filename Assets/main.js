@@ -34,49 +34,11 @@ async function displayData() {
                                 <li class="list-group-item list-group-item-success"><i class="fa fa-clock-o" style="font-size:20px;"></i> Duration</li>
                                 <li class="list-group-item list-group-item-success"><i class="fa fa-inr" style="font-size:20px;"></i> Cost</li>
                             </ul>
-
                         </div>
                         <div class="card-footer">
                             <button type="button" class="btn" id="left-panel-link">Register</button>
                             <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal1" id="right-panel-link">Learn More</button>
                         </div>
-                    </div>
-                    <div class="card" id="${index}">
-                        <img class="card-img-top" src="${item["picture"].large}" alt="Company logo">
-                        <div class="card-body">
-                            <h5 class="card-title">${item["name"].title} ${item["name"].first} ${item["name"].last}</h5>
-                            <ul class="list-group">
-                                <li class="list-group-item list-group-item-success"><i class="fa fa-briefcase" style="font-size:20px;"></i> Company</li>
-                                <li class="list-group-item list-group-item-success"><i class="fa fa-user" style="font-size:20px;"></i> Role</li>
-                                <li class="list-group-item list-group-item-success"><i class="fa fa-map-marker" style="font-size:20px;"></i> Location</li>
-                                <li class="list-group-item list-group-item-success"><i class="fa fa-clock-o" style="font-size:20px;"></i> Duration</li>
-                                <li class="list-group-item list-group-item-success"><i class="fa fa-inr" style="font-size:20px;"></i> Cost</li>
-                            </ul>
-
-                        </div>
-                        <div class="card-footer">
-                            <button type="button" class="btn" id="left-panel-link">Register</button>
-                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal2" id="right-panel-link">Learn More</button>
-                        </div>
-                    </div>
-                    <div class="card" id="${index+1}">
-                        <img class="card-img-top" src="${item["picture"].large}" alt="Company logo">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <ul class="list-group">
-                                <li class="list-group-item list-group-item-success"><i class="fa fa-briefcase" style="font-size:20px;"></i> Company</li>
-                                <li class="list-group-item list-group-item-success"><i class="fa fa-user" style="font-size:20px;"></i> Role</li>
-                                <li class="list-group-item list-group-item-success"><i class="fa fa-map-marker" style="font-size:20px;"></i> Location</li>
-                                <li class="list-group-item list-group-item-success"><i class="fa fa-clock-o" style="font-size:20px;"></i> Duration</li>
-                                <li class="list-group-item list-group-item-success"><i class="fa fa-inr" style="font-size:20px;"></i> Cost</li>
-                            </ul>
-
-                        </div>
-                        <div class="card-footer">
-                            <button type="button" class="btn" id="left-panel-link">Register</button>
-                            <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal3" id="right-panel-link">Learn More</button>
-                        </div>
-                    </div>
-                </div>`
+                    </div>`
     });
 }
