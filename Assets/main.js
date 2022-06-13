@@ -1,3 +1,17 @@
+// document.querySelector(
+//     "#name"
+// ).innerText = `${item["name"].title} ${item["name"].first} ${item["name"].last}`;
+// document.querySelector(
+//     "#email"
+// ).innerText = `${item["email"]}`;
+// document.querySelector("#image").src = `${item["picture"].large}`;
+
+// document.getElementById("name").innerHTML = item;
+// document.getElementById("email").innerHTML = item;
+// document.getElementById("name").innerHTML = [
+//     `${item["name"].title} - ${item["name"].first} ${item["name"].last}`,
+// ];
+// document.getElementById("email").innerHTML = [`${item.email}`];
 async function getData() {
     let collections = await fetch("https://randomuser.me/api?results=3");
     let data = collections.json();
@@ -6,8 +20,9 @@ async function getData() {
 
 async function displayData() {
     let data = await getData();
+    let container = document.querySelector("#container");
     data.results.forEach((item, index) => {
-        container.innnerHTML += `                <div class="card-deck">
+        container.innerHTML += `<div class="card-deck">
                     <div class="card" id="${index}">
                         <img class="card-img-top" src="${item["picture"].large}" alt="Company logo">
                         <div class="card-body">
@@ -26,7 +41,7 @@ async function displayData() {
                             <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal1" id="right-panel-link">Learn More</button>
                         </div>
                     </div>
-                    <div class="card" id="${index + 1}">
+                    <div class="card" id="${index}">
                         <img class="card-img-top" src="${item["picture"].large}" alt="Company logo">
                         <div class="card-body">
                             <h5 class="card-title">${item["name"].title} ${item["name"].first} ${item["name"].last}</h5>
@@ -44,7 +59,7 @@ async function displayData() {
                             <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal2" id="right-panel-link">Learn More</button>
                         </div>
                     </div>
-                    <div class="card" id="${index + 2}">
+                    <div class="card" id="${index+1}">
                         <img class="card-img-top" src="${item["picture"].large}" alt="Company logo">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -62,20 +77,6 @@ async function displayData() {
                             <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal3" id="right-panel-link">Learn More</button>
                         </div>
                     </div>
-                </div>`;
-        // document.querySelector(
-        //     "#name"
-        // ).innerText = `${item["name"].title} ${item["name"].first} ${item["name"].last}`;
-        // document.querySelector(
-        //     "#email"
-        // ).innerText = `${item["email"]}`;
-        // document.querySelector("#image").src = `${item["picture"].large}`;
-
-        // document.getElementById("name").innerHTML = item;
-        // document.getElementById("email").innerHTML = item;
-        // document.getElementById("name").innerHTML = [
-        //     `${item["name"].title} - ${item["name"].first} ${item["name"].last}`,
-        // ];
-        // document.getElementById("email").innerHTML = [`${item.email}`];
+                </div>`
     });
 }
