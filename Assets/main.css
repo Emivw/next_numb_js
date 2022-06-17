@@ -1,77 +1,20 @@
-body {
-    font-family: 'Montserrat';
-    font-style: Italic;
-    background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 20px;
-    z-index: 1;
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.header {
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
+button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    background: #034d85;
+    padding: 1.1rem 3.4rem;
+    border-radius: .2rem;
+    transition: opacity .2s;
 }
 
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-
-@media (max-width: 800px) {
-    .column {
-        flex: 46%;
-        max-width: 46%;
-    }
-}
-
-.card {
-    opacity: 0.8;
-    filter: alpha(opacity=60);
-}
-
-.card-title {
-    font-weight: bold;
-    text-align: center;
-}
-
-.card-text {
-    text-align: justify;
-}
-
-.modal-header {
-    background-image: linear-gradient(#7FDBFF, white);
-}
-
-.modal-footer {
-    background-image: linear-gradient(white, #7FDBFF);
-}
-
-#left-panel-link {
-    position: relative;
-    left: 5%;
-    background-color: #555;
-    color: white;
-    font-size: 16px;
-    padding: 12px 20px;
-    border: none;
+button:hover {
     cursor: pointer;
-    border-radius: 5px;
-}
-
-#right-panel-link {
-    position: absolute;
-    right: 10%;
-    background-color: #555;
-    color: white;
-    font-size: 16px;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.sep {
-    height: 25px;
+    background: #053056;
 }
