@@ -17,12 +17,12 @@
     <div class="container d-flex justify-content-center">
         <div class="row">
             <div class="col">
-                <h1 id="mainhead" class="display-2">hex color to rgb converter</h1>
+                <h1 id="mainhead" class="display-2">rgbcolor to hex color converter</h1>
             </div>
             <div class="row ">
                 <div class="col-md-6 d-flex justify-content-center gap-2 ">
-                    <input type="text" id="hexColor" maxlength="7" onkeyup="hexToRGB()" placeholder='Enter a HEX color' pattern="^#?([0-9a-fA-F]{3}){1,2}\b$" autofocus>
-                    <input type="text" id="rgbColor" placeholder='Result in RGB format' disabled>
+                    <input type="text" id="rgbColor" maxlength="15" onkeyup="rgbToHex()" placeholder="Enter a RGB color" pattern="rgb^#?([0-9a-fA-F]{3}){1,2}\b$" autofocus>
+                    <input type="text" id="hexColor" placeholder="Result in HEX format" disabled>
                     <div class="row ">
                         <div class="col-md d-flex justify-content-center gap-2 ">
                         </div>
