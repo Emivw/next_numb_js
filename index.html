@@ -10,26 +10,25 @@
     <!-- my css -->
     <link rel="stylesheet" href="./assets/main.css">
 
-    <title>array_calc</title>
+    <title>hex_to_rgb</title>
 </head>
 
 <body>
     <div class="container d-flex justify-content-center">
         <div class="row">
             <div class="col">
-                <h1 id="mainhead" class="display-2">min and max of Array</h1>
+                <h1 id="mainhead" class="display-2">hex color to rgb converter</h1>
             </div>
             <div class="row ">
                 <div class="col-md-6 d-flex justify-content-center gap-2 ">
+                    <input type="text" id="hexColor" maxlength="7" onkeyup="hexToRGB()" placeholder='Enter a HEX color' pattern="^#?([0-9a-fA-F]{3}){1,2}\b$" autofocus>
+                    <input type="text" id="rgbColor" placeholder='Result in RGB format' disabled>
                     <div class="row ">
                         <div class="col-md d-flex justify-content-center gap-2 ">
-                            <button class="btn btn-success " onclick="calc()">calculate array</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center ">
-                    <h1 id=" ">Output here:</h1>
-                    <button id="output" class="btn btn-success ">result</button>
                 </div>
             </div>
         </div>
