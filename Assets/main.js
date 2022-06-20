@@ -1,7 +1,11 @@
 function calc() {
-    let base = parseFloat(document.getElementById("base").value);
-    let height = parseFloat(document.getElementById("height").value);
-    let area = Math.floor((base * height) / 2);
-    document.getElementById("output").innerHTML =
-        "Hello, " + "the area of your triangle is " + area;
+    let data = [5, 10, 50, 20, 15];
+    let sum = 0;
+
+    for (const value of data) {
+        sum += value;
+    }
+    document.getElementById('output').innerHTML = `the sum of array ${data} is ${sum}`;
+    console.log(data);
+    console.log(sum);
 }
