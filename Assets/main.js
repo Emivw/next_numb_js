@@ -1,11 +1,19 @@
-function convertToSeconds() {
-    let minutesVal = parseFloat(document.getElementById("input").value);
-    let seconds = minutesVal * 60;
-    document.getElementById("output").innerHTML = seconds.toFixed(2) + " Seconds";
+function age() {
+    let year_born = Date.parse(document.getElementById("input").value);
+    const currentDate = new Date();
+    const a = (Date.parse(currentDate)) - year_born;
+    let ageInDays = Math.floor((a) / (1000 * 60 * 60 * 24));
+    document.getElementById("output").innerHTML =
+        "Hello, " + "you are " + ageInDays + " days old!";
 }
 
-function convertToMinutes() {
-    let secondsVal = parseFloat(document.getElementById("input").value);
-    let minutes = secondsVal / 60;
-    document.getElementById("output").innerHTML = minutes.toFixed(2) + " Minutes";
-}
+
+
+// function getAge(birthYear) {
+//     var currentDate = new Date();
+//     var currentYear = currentDate.getFullYear();
+//     var age = currentYear - birthYear;
+//     return age;
+// }
+// var calculatedAge = getAge(year_born);
+// alert("Hello, " + "you are " + calculatedAge + " years old!");

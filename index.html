@@ -10,28 +10,27 @@
     <!-- my css -->
     <link rel="stylesheet" href="./assets/main.css">
 
-    <title>min_to_sec_Calc</title>
+    <title>age_in_days_Calc</title>
 </head>
 
 <body>
     <div class="container d-flex justify-content-center">
         <div class="row">
             <div class="col">
-                <h1 id="mainhead" class="display-2">Time Converter</h1>
+                <h1 id="mainhead" class="display-2">Age Converter</h1>
             </div>
             <div class="row ">
                 <div class="col-md-6 d-flex justify-content-center gap-2 ">
-                    <input type="text" id="input" placeholder="Enter time" value="" />
-                    <div class="row">
-                        <div class="col-md d-flex justify-content-center gap-2">
-                            <button class="btn btn-success" onclick="convertToSeconds()">Convert to Seconds</button>
-                            <button class="btn btn-success" onclick="convertToMinutes()">Convert to Minutes</button>
+                    <input type="date" id="input" placeholder="yyyy-MM-dd" class="value=" />
+                    <div class="row ">
+                        <div class="col-md d-flex justify-content-center gap-2 ">
+                            <button class="btn btn-success " onclick="age()">get your age in days</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex justify-content-center">
-                    <h1 id="">Output here:</h1>
-                    <button id="output" class="btn btn-success">result</button>
+                <div class="col-md-6 d-flex justify-content-center ">
+                    <h1 id=" ">Output here:</h1>
+                    <button id="output" class="btn btn-success ">result</button>
                 </div>
             </div>
         </div>
