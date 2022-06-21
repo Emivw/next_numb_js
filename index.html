@@ -10,26 +10,23 @@
     <!-- my css -->
     <link rel="stylesheet" href="./assets/main.css">
 
-    <title>hex_to_rgb</title>
+    <title>form_jsonParse</title>
 </head>
 
 <body>
     <div class="container d-flex justify-content-center">
         <div class="row">
-            <div class="col">
-                <h1 id="mainhead" class="display-2">rgbcolor to hex color converter</h1>
-            </div>
-            <div class="row ">
-                <div class="col-md-6 d-flex justify-content-center gap-2 ">
-                    <input type="text" id="rgbColor" maxlength="15" onkeyup="rgbToHex()" placeholder="Enter a RGB color" pattern="rgb^#?([0-9a-fA-F]{3}){1,2}\b$" autofocus>
-                    <input type="text" id="hexColor" placeholder="Result in HEX format" disabled>
-                    <div class="row ">
-                        <div class="col-md d-flex justify-content-center gap-2 ">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 d-flex justify-content-center ">
-                </div>
+            <div class="col-md-12 d-flex flex-column">
+                <label for="name">Name:</label>
+                <input class="form-control" id="name" type="text" placeholder="Enter your name">
+
+                <label for="surname">Surname:</label>
+                <input class="form-control" id="surname" type="text" placeholder="Enter your surname">
+
+                <label for="age">Color in Rgb:</label>
+                <input class="form-control" id="rgbColor" onkeyup="rgbToHex()" type="text" placeholder="Enter your rgbColor">
+
+                <button id="addRecord" class="btn btn-primary">Add record</button>
             </div>
         </div>
     </div>
